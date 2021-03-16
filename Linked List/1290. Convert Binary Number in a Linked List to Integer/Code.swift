@@ -12,12 +12,12 @@ class Solution {
     func getDecimalValue(_ head: ListNode?) -> Int {
         var node = head
         var res = 0
-        
+
         while node != nil {
             res = res << 1 | node!.val
             node = node!.next
         }
-        
+
         return res
     }
 }

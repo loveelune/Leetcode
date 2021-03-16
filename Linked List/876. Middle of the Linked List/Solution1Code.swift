@@ -13,16 +13,16 @@ class Solution {
         if head?.next == nil {
             return head
         }
-        
+
         var len = 0
         var node = head
         while node != nil {
             len += 1
             node = node!.next
         }
-        
+
         node = head
-        for i in 0..<len / 2 {
+        for i in 0 ..< len / 2 {
             node = node!.next
         }
         return node

@@ -13,30 +13,30 @@ class Solution {
         if head == nil || m == 0 {
             return nil
         }
-        
-        var prevNode: ListNode? = nil, currNode = head
+
+        var prevNode: ListNode?, currNode = head
         while currNode != nil {
             var mNodesCnt = m, nNodesCnt = n
             // Keep m nodes
-            while currNode != nil && mNodesCnt > 0 {
+            while currNode != nil, mNodesCnt > 0 {
                 prevNode = currNode
                 currNode = currNode!.next
                 mNodesCnt -= 1
             }
-            
+
             // Early return if already traverse through the list
             if currNode == nil {
                 break
             }
-            
+
             // Delete n nodes
-            while currNode != nil && nNodesCnt > 0 {
+            while currNode != nil, nNodesCnt > 0 {
                 currNode = currNode!.next
                 nNodesCnt -= 1
             }
             prevNode!.next = currNode
         }
-        
+
         return head
     }
 }

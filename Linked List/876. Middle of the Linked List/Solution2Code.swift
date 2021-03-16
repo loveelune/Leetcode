@@ -13,7 +13,7 @@ class Solution {
         if head?.next == nil {
             return head
         }
-        
+
         var slowPtr = head, fastPtr = head
         while fastPtr?.next != nil {
             fastPtr = fastPtr?.next
