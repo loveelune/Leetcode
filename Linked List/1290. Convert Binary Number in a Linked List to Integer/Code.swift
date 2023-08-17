@@ -17,7 +17,7 @@ class Solution {
             res = res << 1 | node!.val
             node = node!.next
         }
-        print("Test pushing to multiple branches")
+
         return res
     }
 }
