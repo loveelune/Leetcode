@@ -12,6 +12,7 @@ class Solution {
     func reverseList(_ head: ListNode?) -> ListNode? {
         var prev: ListNode?, cur = head, next = head?.next
 
+        // Curr means the node to reverse
         while cur != nil {
             cur!.next = prev
             prev = cur
